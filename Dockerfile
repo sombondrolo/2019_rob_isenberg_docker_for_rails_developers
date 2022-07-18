@@ -1,4 +1,5 @@
 FROM ruby:2.6
+LABEL mantainer=”sombondrolo@gmail.com”
 
 RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
   nodejs
