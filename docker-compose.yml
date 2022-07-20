@@ -22,7 +22,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
 
-  webpack_dev_server:
+  webpack-dev-server:
     build: .
     command: ./bin/webpack-dev-server
     ports:
