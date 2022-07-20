@@ -9,6 +9,8 @@ services:
     env_file:
       - .env/development/database
       - .env/development/web
+    environment:
+      - WEBPACKER_DEV_SERVER_HOST=webpack_dev_server
 
   redis:
     image: redis
@@ -19,6 +21,19 @@ services:
       - .env/development/database
     volumes:
       - db_data:/var/lib/postgresql/data
+
+  webpack_dev_server:
+    build: .
+    command: ./bin/webpack-dev-server
+    ports:
+      - 3035:3035
+    volumes:
+      - .:/usr/src/app
+    env_file:
+      - .env/development/database
+      - .env/development/web
+    environment:
+      - WEBPACKER_DEV_SERVER_HOST=0.0.0.0
 
 volumes:
   db_data:
