@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'redis', '4.1.0'
 gem 'pg', '1.1.4'
+gem 'webpacker', '3.5'
