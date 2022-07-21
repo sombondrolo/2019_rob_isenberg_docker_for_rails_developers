@@ -42,6 +42,7 @@ group :development, :test do
 
   gem 'rspec-rails', '3.8.0'
   gem 'capybara', '3.7'
+  gem 'selenium-webdriver', '3.14'
 end
 
 group :development do
