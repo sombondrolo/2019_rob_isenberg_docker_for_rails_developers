@@ -22,7 +22,7 @@ services:
     env_file:
       - .env/development/database
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_data_compose:/var/lib/postgresql/data
 
   webpack-dev-server:
     build: .
@@ -46,5 +46,5 @@ services:
       - "5900:5900"
 
 volumes:
-  db_data:
+  db_data_compose:
   gem_cache:
